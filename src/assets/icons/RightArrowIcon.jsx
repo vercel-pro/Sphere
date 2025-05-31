@@ -1,6 +1,6 @@
 import React from "react";
 
-const RighArrowIcon = () => {
+const RightArrowIcon = () => {
   return (
     <svg
       width="18"
@@ -12,19 +12,19 @@ const RighArrowIcon = () => {
       <path
         d="M3.75 9.5H14.25"
         stroke="white"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M9 4.25L14.25 9.5L9 14.75"
         stroke="white"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
 };
 
-export default RighArrowIcon;
+export default RightArrowIcon;

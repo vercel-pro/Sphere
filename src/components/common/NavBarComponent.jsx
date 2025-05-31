@@ -1,6 +1,6 @@
 import React from "react";
 import Container from "./Container";
-import Logo from "../../assets/images/svgImages/Logo";
+import Logo from "../../assets/images/Logo";
 import { NavData } from "../../data/NavData";
 import { Link } from "react-router-dom";
 import Button from "./Button";
@@ -31,7 +31,11 @@ const NavBarComponent = () => {
               >
                 LOGIN
               </p>
-              <Button buttonText="Sign Up Now" textColor="text-white" />
+              <Button
+                buttonText="Sign Up Now"
+                textColor="text-white"
+                isArrowIcon={true}
+              />
             </div>
           </div>
         </Container>
