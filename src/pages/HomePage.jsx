@@ -1,9 +1,9 @@
-import React from "react";
+import NavBarComponent from "../components/common/NavBarComponent";
 
 const HomePage = () => {
   return (
     <>
-      <h1>Home</h1>
+      <NavBarComponent />
     </>
   );
 };
