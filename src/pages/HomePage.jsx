@@ -1,9 +1,9 @@
-import NavBarComponent from "../components/common/NavBarComponent";
+import Banner from "../components/Banner";
 
 const HomePage = () => {
   return (
     <>
-      <NavBarComponent />
+      <Banner />
     </>
   );
 };
