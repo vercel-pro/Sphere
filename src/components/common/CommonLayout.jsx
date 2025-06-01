@@ -8,7 +8,7 @@ const CommonLayout = () => {
     <>
       <NavBarComponent />
       <Outlet />
-      {/* <FooterComponent /> */}
+      <FooterComponent />
     </>
   );
 };

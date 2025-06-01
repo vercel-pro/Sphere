@@ -1,4 +1,5 @@
 import Banner from "../components/Banner";
+import NewArrivalComponent from "../components/NewArrivalComponent";
 import Services from "../components/Services";
 
 const HomePage = () => {
@@ -6,6 +7,7 @@ const HomePage = () => {
     <>
       <Banner />
       <Services />
+      <NewArrivalComponent />
     </>
   );
 };
