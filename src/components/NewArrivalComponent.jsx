@@ -4,6 +4,7 @@ import LeftArrow from "../assets/icons/LeftArrow";
 import RightShotArrowIcon from "../assets/icons/RightShotArrowIcon";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
+import NewArrivalCartComponent from "./NewArrivalCartComponent";
 
 const NewArrivalComponent = () => {
   var settings = {
@@ -51,7 +52,9 @@ const NewArrivalComponent = () => {
                     15
                   </span>
                 </li>
-                <li>
+                <li
+                  className={`relative before:content="" before:w-[2px] before:h-[43px] before:bg-brightPurple before:absolute before:-left-6 before:top-1/2 before:-translate-1/2`}
+                >
                   Mobile & Phone
                   <span
                     className={`bg-[#AFE638] text-[#1F2537] py-[6px] ml-[18px] font-bold px-3 rounded-md`}
@@ -85,7 +88,9 @@ const NewArrivalComponent = () => {
                 </li>
               </ul>
             </div>
-            <div className="w-[919px] border h-[404px]"></div>
+            <div className="w-[919px]">
+              <NewArrivalCartComponent />
+            </div>
           </div>
         </Container>
       </div>
