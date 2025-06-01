@@ -2,9 +2,19 @@
 
 @theme {
   --font-montserrat: "Montserrat", "sans-serif";
+  --font-prompt: "Prompt", "sans-serif";
   --text-t100: 100px;
   --color-brightPurple: #5e1ee5;
   --color-lightGrey: #f3f4f6;
   --color-navText: #8e8e8e;
-  /* --color-black: #000000; */
+  ----color-iconBG: `linear-gradient(
+      140deg,
+      rgba(255, 255, 255, 0.52) 1.44%,
+      rgba(255, 255, 255, 0.18) 98.22%
+    )
+    `;
+  --inset-shadow-iconShadow: box-shadow(0px 4px 24px rgba(0, 0, 0, 0.08));
+}
+.computerIcon {
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
 }
