@@ -28,9 +28,9 @@ const NewArrivalCartComponent = ({
 
   return (
     <>
-      <div>
+      <div className={`${cardWidth}`}>
         <div
-          className={`${cardWidth}  ${paddingLeft} ${paddingRight} ${paddingTop} ${paddingBottom} bg-linear-(--iconBG) relative shadow-iconShadow rounded-[15px]`}
+          className={`  ${paddingLeft} ${paddingRight} ${paddingTop} ${paddingBottom} bg-linear-(--iconBG) relative shadow-iconShadow rounded-[15px]`}
         >
           <div>
             <div
