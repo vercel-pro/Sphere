@@ -3,17 +3,78 @@ import Container from "./common/Container";
 import LeftArrow from "../assets/icons/LeftArrow";
 import RightShotArrowIcon from "../assets/icons/RightShotArrowIcon";
 import { Link } from "react-router-dom";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import NewArrivalCartComponent from "./NewArrivalCartComponent";
+import { NewArrivalData } from "../data/NewArrivalData";
+
+// function SamplePrevArrow(props) {
+//   const { className, style, onClick } = props;
+//   return (
+//     <div
+//       className={className}
+//       style={{
+//         ...style,
+//         color: "#303030",
+//         fontSize: "20px",
+//         border: "1px solid #303030",
+//         borderRadius: "50%",
+//         width: "40px",
+//         height: "40px",
+//         display: "flex",
+//         justifyContent: "center",
+//         alignItems: "center",
+//         position: "absolute",
+//         left: "calc(50% - 803px)",
+//         zIndex: "99",
+//       }}
+//       onClick={onClick}
+//     >
+//       {/* <MdArrowBackIosNew /> */}
+//     </div>
+//   );
+// }
+
+// function SampleNextArrow(props) {
+//   const { className, style, onClick } = props;
+//   return (
+//     <div
+//       className={className}
+//       style={{
+//         ...style,
+//         color: "#303030",
+//         fontSize: "20px",
+//         border: "1px solid #303030",
+//         borderRadius: "50%",
+//         width: "40px",
+//         height: "40px",
+//         display: "flex",
+//         justifyContent: "center",
+//         alignItems: "center",
+//         position: "absolute",
+//         left: "calc(50% + 745px)",
+//         zIndex: "99",
+//       }}
+//       onClick={onClick}
+//     >
+//       {/* <MdArrowForwardIos /> */}
+//     </div>
+//   );
+// }
 
 const NewArrivalComponent = () => {
-  var settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-  };
+  // var settings = {
+  //   dots: false,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 2,
+  //   slidesToScroll: 1,
+  //   autoplay: false,
+  //   autoplaySpeed: 2000,
+  //   nextArrow: <SampleNextArrow />,
+  //   prevArrow: <SamplePrevArrow />,
+  // };
   return (
     <>
       <div className="mt-[86px]">
@@ -89,7 +150,43 @@ const NewArrivalComponent = () => {
               </ul>
             </div>
             <div className="w-[919px]">
-              <NewArrivalCartComponent />
+              <div className="flex gap-[98px]">
+                {NewArrivalData.map((item, index) => (
+                  <NewArrivalCartComponent
+                    key={index}
+                    iconTop={item.iconTop}
+                    iconRight={item.iconRight}
+                    paddingLeft={item.paddingLeft}
+                    paddingRight={item.paddingRight}
+                    paddingTop={item.paddingTop}
+                    paddingBottom={item.paddingBottom}
+                    title={item.title}
+                    price={item.price}
+                    description={item.description}
+                    rating={item.rating}
+                    totalRating={item.totalRating}
+                    buttonText={item.buttonText}
+                    buttonBorder={item.buttonBorder}
+                  />
+                ))}
+              </div>
+              {/* <Slider {...settings} className="flex justify-center">
+                {NewArrivalData.map((item, index) => (
+                  <NewArrivalCartComponent
+                    key={index}
+                    iconTop={item.iconTop}
+                    iconRight={item.iconRight}
+                    paddingLeft={item.paddingLeft}
+                    paddingRight={item.paddingRight}
+                    paddingTop={item.paddingTop}
+                    paddingBottom={item.paddingBottom}
+                    title={item.title}
+                    price={item.price}
+                    description={item.description}
+                    rating={item.rating}
+                  />
+                ))}
+              </Slider> */}
             </div>
           </div>
         </Container>

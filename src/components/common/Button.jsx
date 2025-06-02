@@ -9,6 +9,7 @@ const Button = ({
   textColor = "text-black",
   paddingTB = "py-4",
   paddingLR = "px-[37px]",
+  border = "",
   rounded = "rounded-[52px]",
   isArrowIcon = false,
 }) => {
@@ -16,7 +17,7 @@ const Button = ({
     <>
       <Link
         to={"/"}
-        className={`${bg} ${textColor} ${paddingTB} ${paddingLR} ${rounded} flex justify-center items-center gap-x-[13px]`}
+        className={`${bg} ${textColor} ${paddingTB} ${paddingLR} ${border} ${rounded} inline-flex justify-center items-center gap-x-[13px] font-['Montserrat'] font-medium text-center`}
       >
         {!isArrowIcon && <CartIcon />} {buttonText}{" "}
         {isArrowIcon && <RightArrowIcon />}
