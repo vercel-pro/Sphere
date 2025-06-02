@@ -18,7 +18,11 @@ const BestSellers = () => {
               <Stare />
             </div>
           </div>
-          <div className={`flex items-center`}>
+          <h2 className="font-prompt font-bold text-[47px] leading-[58.75px] tracking-[-0.94px] mb-14">
+            Flash sale for <span className="text-brightPurple">best</span>{" "}
+            sellers
+          </h2>
+          <div className={`flex items-center `}>
             {BestSellersData.map((item, index) => (
               <NewArrivalCartComponent
                 key={index}
@@ -35,6 +39,8 @@ const BestSellers = () => {
                 totalRating={item.totalRating}
                 buttonText={item.buttonText}
                 buttonBorder={item.buttonBorder}
+                isDiscount={item.isDiscount}
+                discountAmount={item.discountAmount}
               />
             ))}
           </div>
