@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "./common/Container";
 import LeftArrow from "../assets/icons/LeftArrow";
 import RightShotArrowIcon from "../assets/icons/RightShotArrowIcon";
@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import NewArrivalCartComponent from "./NewArrivalCartComponent";
 import { NewArrivalData } from "../data/NewArrivalData";
+import { NewArrivalMenuData } from "../data/NewArrivalMenuData";
 
 // function SamplePrevArrow(props) {
 //   const { className, style, onClick } = props;
@@ -64,6 +65,8 @@ import { NewArrivalData } from "../data/NewArrivalData";
 // }
 
 const NewArrivalComponent = () => {
+  const [menuData, setMenuData] = useState(NewArrivalMenuData);
+
   // var settings = {
   //   dots: false,
   //   infinite: true,
@@ -75,6 +78,17 @@ const NewArrivalComponent = () => {
   //   nextArrow: <SampleNextArrow />,
   //   prevArrow: <SamplePrevArrow />,
   // };
+
+  const handleClick = (e) => {
+    const indexNumber = parseInt(e.currentTarget.getAttribute("data-index"));
+    const updatedMenu = menuData.map((item, index) => ({
+      ...item,
+      isBefore: index === indexNumber,
+    }));
+    // console.log(indexNumber, updatedMenu);
+    setMenuData(updatedMenu);
+  };
+
   return (
     <>
       <div className="mt-[86px]">
@@ -105,48 +119,24 @@ const NewArrivalComponent = () => {
               <ul
                 className={`flex flex-col gap-y-[30px] font-["montserrat"] font-medium text-base leading-[20.8px] text-paraColor `}
               >
-                <li>
-                  Computer & Laptop
-                  <span
-                    className={`bg-[#1F2537] text-white py-[6px] ml-[18px] font-bold px-3 rounded-md`}
+                {menuData.map((item, index) => (
+                  <li
+                    key={index}
+                    data-index={index}
+                    onClick={handleClick}
+                    className={`relative ${
+                      item.isBefore &&
+                      "before:content='' before:w-[2px] before:h-[43px] before:bg-brightPurple before:absolute before:-left-6 before:top-1/2 before:-translate-1/2"
+                    }`}
                   >
-                    15
-                  </span>
-                </li>
-                <li
-                  className={`relative before:content="" before:w-[2px] before:h-[43px] before:bg-brightPurple before:absolute before:-left-6 before:top-1/2 before:-translate-1/2`}
-                >
-                  Mobile & Phone
-                  <span
-                    className={`bg-[#AFE638] text-[#1F2537] py-[6px] ml-[18px] font-bold px-3 rounded-md`}
-                  >
-                    35
-                  </span>
-                </li>
-                <li>
-                  Camera Imaging
-                  <span
-                    className={`bg-[#5E1EE5] text-white py-[6px] ml-[18px] font-bold px-3 rounded-md`}
-                  >
-                    35
-                  </span>
-                </li>
-                <li>
-                  TV & Smart Box
-                  <span
-                    className={`bg-[#F1F1F2] text-[#1F2537] py-[6px] ml-[18px] font-bold px-3 rounded-md`}
-                  >
-                    8
-                  </span>
-                </li>
-                <li>
-                  Home Appliance
-                  <span
-                    className={`bg-[#FFE921] text-[#1F2537] py-[6px] ml-[18px] font-bold px-3 rounded-md`}
-                  >
-                    8
-                  </span>
-                </li>
+                    {item.text}
+                    <span
+                      className={`inline-block ${item.stockBgColor} ${item.textColor} py-[6px] ml-[18px] font-bold px-3 rounded-md`}
+                    >
+                      35
+                    </span>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="w-[919px]">

@@ -10,13 +10,13 @@ const NavBarComponent = () => {
     <>
       <div className={`mt-[49px] font-montserrat `}>
         <Container>
-          <div className={`flex justify-between items-center`}>
+          <div className={`flex gap-x-[176px] items-center`}>
             <div>
               <Link to={"/"}>
                 <Logo />
               </Link>
             </div>
-            <div>
+            <div className={`pl-[34px]`}>
               <ul
                 className={`flex justify-center items-center gap-x-[57px] text-navText uppercase text-[13px] font-semibold tracking-[1.3px]`}
               >

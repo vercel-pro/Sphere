@@ -31,7 +31,11 @@ const OfferComponent = () => {
             */}
 
             {ServiceData.map((item, index) => (
-              <Link to={"/"} className={`bg-[#F3F4F6] rounded-[21px]`}>
+              <Link
+                key={index}
+                to={"/"}
+                className={`bg-[#F3F4F6] rounded-[21px]`}
+              >
                 <img src={item.imageSrc} alt="images" />
               </Link>
             ))}
