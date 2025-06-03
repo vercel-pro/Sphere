@@ -3,6 +3,7 @@ import Container from "./common/Container";
 import SearchIcon from "../assets/icons/SearchIcon";
 import { Link } from "react-router-dom";
 import LogoWhite from "../assets/icons/LogoWhite";
+import Stare from "../assets/Illustration/Stare";
 
 const Gateway = () => {
   return (
@@ -12,7 +13,10 @@ const Gateway = () => {
           <div
             className={`h-[307px] bg-[#212736] rounded-[20px] flex justify-between items-end pt-[62px] pb-[80px] pl-[73px] pr-[51px]`}
           >
-            <div className={`w-[473px]`}>
+            <div className={`w-[473px] relative`}>
+              <div className="absolute right-0 bottom-0">
+                <Stare />
+              </div>
               <h2
                 className={`font-["prompt"] font-bold text-[46px] leading-[55.2px] tracking-[0.9px] text-white mb-[17px]`}
               >
