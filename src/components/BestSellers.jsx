@@ -22,7 +22,7 @@ const BestSellers = () => {
             Flash sale for <span className="text-brightPurple">best</span>{" "}
             sellers
           </h2>
-          <div className={`flex items-center `}>
+          <div className={`flex items-center gap-[20px]`}>
             {BestSellersData.map((item, index) => (
               <NewArrivalCartComponent
                 key={index}
@@ -40,6 +40,7 @@ const BestSellers = () => {
                 buttonText={item.buttonText}
                 buttonBorder={item.buttonBorder}
                 isDiscount={item.isDiscount}
+                discountPercentage={item.discountPercentage}
                 discountAmount={item.discountAmount}
               />
             ))}
