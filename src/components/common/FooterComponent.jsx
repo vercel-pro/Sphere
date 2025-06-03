@@ -19,7 +19,7 @@ const FooterComponent = () => {
                 tellus vitae leo nunc.
               </p>
             </div>
-            <div className="w-[calc(1240px-381px-147px)] flex gap-x-[70px]">
+            <div className="w-[716px] flex gap-x-[70px]">
               <div>
                 <h3
                   className={`font-extrabold text-[22px] leading-[35.2px] mb-[13px] capitalize`}
@@ -27,7 +27,7 @@ const FooterComponent = () => {
                   Company
                 </h3>
                 <ul
-                  className={`flex flex-col gap-y-[13px] font-normal text-lg leading-[28.8px] mb-[13px] capitalize`}
+                  className={`w-[170px] flex flex-col gap-y-[13px] font-normal text-lg leading-[28.8px] mb-[13px] capitalize`}
                 >
                   <li>
                     <Link to={"/"}>About Us</Link>
@@ -47,7 +47,7 @@ const FooterComponent = () => {
                   Information
                 </h3>
                 <ul
-                  className={`flex flex-col gap-y-[13px] font-normal text-lg leading-[28.8px] mb-[13px] capitalize`}
+                  className={`w-[169px] flex flex-col gap-y-[13px] font-normal text-lg leading-[28.8px] mb-[13px] capitalize`}
                 >
                   <li>
                     <Link to={"/"}>Help Center</Link>
@@ -67,7 +67,7 @@ const FooterComponent = () => {
                   Contact
                 </h3>
                 <ul
-                  className={`flex flex-col gap-y-[13px] font-normal text-lg leading-[28.8px] mb-[13px] capitalize`}
+                  className={`w-[238px] flex flex-col gap-y-[13px] font-normal text-lg leading-[28.8px] mb-[13px]`}
                 >
                   <li>
                     <Link
@@ -84,7 +84,7 @@ const FooterComponent = () => {
                       className={`flex justify-start items-center gap-x-[11.64px]`}
                     >
                       <EmailIcon />
-                      ramen@devsramen.com
+                      email@youremail.com
                     </Link>
                   </li>
                 </ul>

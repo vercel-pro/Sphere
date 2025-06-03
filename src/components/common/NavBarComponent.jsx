@@ -16,7 +16,7 @@ const NavBarComponent = () => {
                 <Logo />
               </Link>
             </div>
-            <div className={`pl-[34px]`}>
+            <div className={`pl-[24px]`}>
               <ul
                 className={`flex justify-center items-center gap-x-[57px] text-navText uppercase text-[13px] font-semibold tracking-[1.3px]`}
               >
