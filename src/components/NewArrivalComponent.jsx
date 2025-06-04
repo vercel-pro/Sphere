@@ -89,12 +89,13 @@ const NewArrivalComponent = () => {
             <div
               className={`w-[321px] pt-8 pl-6 relative before:content="" before:w-[2px] before:h-[308px] before:bg-[#E2E2E2] before:absolute before:left-0 before:top-5`}
             >
-              <ul
+              <div
                 className={`flex flex-col gap-y-[30px] font-["montserrat"] font-medium text-base leading-[20.8px] text-paraColor `}
               >
                 {menuData.map((item, index) => (
-                  <li
+                  <Link
                     key={index}
+                    to={"/"}
                     data-index={index}
                     onClick={handleClick}
                     className={`relative ${
@@ -106,11 +107,11 @@ const NewArrivalComponent = () => {
                     <span
                       className={`inline-block ${item.stockBgColor} ${item.textColor} py-[6px] ml-[18px] font-bold px-3 rounded-md`}
                     >
-                      35
+                      {item.stock}
                     </span>
-                  </li>
+                  </Link>
                 ))}
-              </ul>
+              </div>
             </div>
             <div className="w-[939px]">
               {/* <div className="flex gap-[98px]">
